@@ -9,15 +9,27 @@ import {
   useLocation,
 } from "react-router-dom";
 
+// const App: React.FC = () => {
+//   return (
+//     <Router>
+//       <Routes>
+//         <Route path="/" element={<SideNavbar />} />
+//       </Routes>
+//     </Router>
+//   );
+// }
+
+// export default App;
+
+
+
+
 const App: React.FC = () => {
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<SideNavbar />} />
-       
-      </Routes>
-    </Router>
-  );
-}
+    return (
+        <Router>
+            <SideNavbar />
+        </Router>
+    );
+};
 
 export default App;
