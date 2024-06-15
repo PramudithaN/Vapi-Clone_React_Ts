@@ -77,14 +77,63 @@ body {
   background: #1f1f1f;
 }
 
-.stat-card, .agent-card {
+.stat-card {
   background: #2a2a2a;
   color: #fff;
   border-radius: 8px;
+   border:'none'
 }
 
 .agent-not-selected {
   background: #2a2a2a;
   color: #fff;
   border-radius: 8px;
+}
+
+/* Add this to your styles.css or equivalent */
+
+.backgroundHeader {
+  background: #161616;
+}
+
+.sideMenu .ant-menu-dark, .sideMenu .ant-menu-dark .ant-menu-inline.ant-menu-sub {
+  background: #161616;
+}
+
+.sideMenu .ant-menu-item-selected {
+  background-color: #ff7e16 !important;
+}
+
+.agent-card {
+  cursor: pointer;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.agent-card:hover {
+  /* background-color: #ff7e16 !important; */
+  color: #f79d54 !important;
+}
+
+.stat-card-agent {
+  background: #1c1c1c;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  border: "none";
+}
+
+.agent-not-selected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  text-align: center;
+  color: #fff;
 }

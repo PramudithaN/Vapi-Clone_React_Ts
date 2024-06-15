@@ -9,7 +9,7 @@ interface AgentCardProps {
 
 const AgentCard: React.FC<AgentCardProps> = ({ name }) => {
     return (
-        <Card className="agent-card" style={{padding:'0px', marginBottom: '16px', backgroundColor: '#2a2a2a', color: '#fff' ,border:"none"}}>
+        <Card className="agent-card" style={{padding:'0px', backgroundColor: '#2a2a2a', color: '#fff' ,border:"none"}}>
             <UserOutlined style={{ marginRight: '8px' }} />
             {name}
         </Card>
