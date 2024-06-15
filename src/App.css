@@ -64,4 +64,11 @@ body {
   height: 100vh;
   position: fixed; 
   left: 0; 
+
+}
+
+.homePageCard{
+  width: 450px;
+  background-color:#393838 ;
+  border: none;
 }

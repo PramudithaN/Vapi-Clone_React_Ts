@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {
-    CarOutlined,
-    ClusterOutlined,
+	CarOutlined,
+	ClusterOutlined,
 	HomeOutlined,
 	MenuFoldOutlined,
 	MenuUnfoldOutlined,
@@ -11,13 +11,15 @@ import {
 	UserOutlined,
 	VideoCameraOutlined,
 } from "@ant-design/icons";
-import { Button, ConfigProvider, Layout, Menu, theme } from "antd";
+import { Button, Col, ConfigProvider, Layout, Menu, Row, theme } from "antd";
 import { useNavigate } from "react-router-dom";
+import StatBox from "./StatBox";
+import Dashboard from "./Dashboard";
 
 const { Header, Sider, Content } = Layout;
 
 const SideNavbar: React.FC = () => {
-    const [primary, setPrimary] = React.useState('#ff7e16');
+	const [primary, setPrimary] = React.useState("#ff7e16");
 	const [collapsed, setCollapsed] = useState(false);
 	const {
 		token: { colorBgContainer, borderRadiusLG },
@@ -27,103 +29,135 @@ const SideNavbar: React.FC = () => {
 	const handleNavigate = () => {
 		navigate("/");
 	};
+    const handleReale = () => {
+		navigate("/realEstate");
+	};
 	return (
-        
-        <Layout className="Layout">
-        <ConfigProvider
-        theme={{
-          components: {
-            Button: {
-              colorPrimary: '#ff7e16',
-            },
-            // Input: {
-            //   colorPrimary: '#ff7e16',
-            // },
-            // Layout: {
-            //     colorPrimary: '#ff7e16',
-            //   colorBgContainer: '#ff7e16',
-            // },
-            Menu: {
-                
-              colorPrimary: '#ff7e16',
-            },
-          },
-          token: {
-            colorPrimary: primary,
-            colorText: '#fff',
-          },
-        }}
-      >
-			<Sider trigger={null} collapsible collapsed={collapsed} theme="light" style={{ background: "#161616" }}
-            >
-				<div className="demo-logo-vertical" />
-				{/* User Image Icon*/}
-				<div
-					style={{
-						display: "flex",
-						justifyContent: "center",
-						alignItems: "center",
-						paddingTop: "4px",
-						paddingBottom: "10px",
-					}}
+		<Layout className="Layout">
+			<ConfigProvider
+				theme={{
+					components: {
+						Button: {
+							colorPrimary: "#ff7e16",
+						},
+						// Input: {
+						//   colorPrimary: '#ff7e16',
+						// },
+						// Layout: {
+						//     colorPrimary: '#ff7e16',
+						//   colorBgContainer: '#ff7e16',
+						// },
+						Menu: {
+							colorPrimary: "#ff7e16",
+						},
+					},
+					token: {
+						colorPrimary: primary,
+						colorText: "#fff",
+					},
+				}}
+			>
+				<Sider
+					trigger={null}
+					collapsible
+					collapsed={collapsed}
+					theme="light"
+					style={{ background: "#161616" }}
 				>
-					<img
-						src="Images/CCCC.png"
-						alt="Profile"
-						onClick={() => {
-							handleNavigate();
-						}}
+					<div className="demo-logo-vertical" />
+					{/* User Image Icon*/}
+					<div
 						style={{
-							width: collapsed ? "60px" : "120px",
-							height: collapsed ? "60px" : "120px",
-							transition: "all 0.3s",
-							cursor: "pointer",
+							display: "flex",
+							justifyContent: "center",
+							alignItems: "center",
+							paddingTop: "4px",
+							paddingBottom: "10px",
 						}}
+					>
+						<img
+							src="Images/CCCC.png"
+							alt="Profile"
+							onClick={() => {
+								handleNavigate();
+							}}
+							style={{
+								width: collapsed ? "60px" : "120px",
+								height: collapsed ? "60px" : "120px",
+								transition: "all 0.3s",
+								cursor: "pointer",
+							}}
+						/>
+					</div>
+					<Menu
+						theme="dark"
+						className="sideMenu"
+						mode="inline"
+						defaultSelectedKeys={[""]}
+                        onClick={({ key }) => {
+							switch (key) {
+								case "0":
+									handleNavigate();
+									break;
+								case "1":
+									handleNavigate();
+									break;
+								case "2":
+									handleNavigate();
+									break;
+								case "4":
+                                    handleNavigate();
+									break;
+								case "5":
+                                    handleReale();
+									break;
+								case "6":
+                                    handleNavigate();
+									break;
+								default:
+									break;
+							}
+						}}
+						items={[
+							{
+								key: "0",
+								icon: <HomeOutlined />,
+								label: "Real Estate",
+							},
+							{
+								key: "1",
+								icon: <UserOutlined />,
+								label: "Mortgage",
+							},
+							{
+								key: "2",
+								icon: <SunOutlined />,
+								label: "Solar",
+							},
+							{
+								key: "4",
+								icon: <MoneyCollectOutlined />,
+								label: "Insurance",
+							},
+							{
+								key: "5",
+								icon: <ClusterOutlined />,
+								label: "Steel",
+							},
+							{
+								key: "6",
+								icon: <CarOutlined />,
+								label: "Automotive",
+							},
+						]}
 					/>
-				</div>
-				<Menu
-					theme="dark"
-                    
-					className="sideMenu"
-					mode="inline"
-					defaultSelectedKeys={["0"]}
-					items={[
-						{
-							key: "0",
-							icon: <HomeOutlined />,
-							label: "Real Estate",
-						},
-						{
-							key: "1",
-							icon: <UserOutlined />,
-							label: "Mortgage",
-						},
-						{
-							key: "2",
-							icon: <SunOutlined />,
-							label: "Solar",
-						},
-						{
-							key: "4",
-							icon: <MoneyCollectOutlined />,
-							label: "Insurance",
-						},
-                        {
-							key: "5",
-							icon: <ClusterOutlined />,
-							label: "Steel",
-						},
-                        {
-							key: "6",
-							icon: <CarOutlined />,
-							label: "Automotive",
-						},
-					]}
-				/>
-			</Sider>
-            </ConfigProvider>
+				</Sider>
+			</ConfigProvider>
 			<Layout className="backgroundLayout">
-				<Header className="backgroundHeader" style={{ padding: 0, background: "none" }}>
+				<Header
+					className="backgroundHeader"
+					style={{ padding: 0, background: "none" }}
+				>
 					<Button
 						type="text"
 						icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
@@ -142,13 +176,14 @@ const SideNavbar: React.FC = () => {
 						minHeight: 280,
 						background: "#0e0d0c",
 						borderRadius: borderRadiusLG,
+                        color: "#fff",
 					}}
 				>
-					Content
+			<Dashboard/>
 				</Content>
 			</Layout>
 		</Layout>
-		
+
 		// <>
 		// <div className="Layout">
 
