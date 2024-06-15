@@ -66,7 +66,7 @@ const Mortgage: React.FC = () => {
 						display: "flex",
 						justifyContent: "center",
 						alignItems: "center",
-						backgroundColor: "#3c3733",
+						backgroundColor: "#403832",
 						borderRadius: "8px",
 					}}
 				>
@@ -86,7 +86,7 @@ const Mortgage: React.FC = () => {
 			<Spin spinning={loading}>
 				<div
 					style={{
-						backgroundColor: "#3c3733",
+						backgroundColor: "#403832",
 						borderRadius: "8px",
 						padding: "16px",
 						color: "#fff",
@@ -145,7 +145,11 @@ const Mortgage: React.FC = () => {
 			>
 				<Row gutter={4}>
 					<Col span={6}>
-						<Collapse defaultActiveKey={["1"]} ghost>
+						<Collapse
+							defaultActiveKey={["1"]}
+							ghost
+							style={{ marginRight: "20px" }}
+						>
 							<Panel
 								header={
 									<div className="panel-header">
