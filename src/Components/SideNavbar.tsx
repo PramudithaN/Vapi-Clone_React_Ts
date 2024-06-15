@@ -12,9 +12,10 @@ import {
 	VideoCameraOutlined,
 } from "@ant-design/icons";
 import { Button, Col, ConfigProvider, Layout, Menu, Row, theme } from "antd";
-import { useNavigate } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import StatBox from "./StatBox";
 import Dashboard from "./Dashboard";
+import Mortgage from "./Mortgage";
 
 const { Header, Sider, Content } = Layout;
 
@@ -26,10 +27,15 @@ const SideNavbar: React.FC = () => {
 	} = theme.useToken();
 	const navigate = useNavigate();
 
-	const handleNavigate = () => {
-		navigate("/");
+	// const handleNavigate = () => {
+	// 	navigate("/");
+	// };
+
+	const handleNavigate = (path: string) => {
+		navigate(path);
 	};
-    const handleReale = () => {
+
+	const handleReale = () => {
 		navigate("/realEstate");
 	};
 	return (
@@ -79,7 +85,7 @@ const SideNavbar: React.FC = () => {
 							src="Images/CCCC.png"
 							alt="Profile"
 							onClick={() => {
-								handleNavigate();
+								handleNavigate("/");
 							}}
 							style={{
 								width: collapsed ? "60px" : "120px",
@@ -94,25 +100,25 @@ const SideNavbar: React.FC = () => {
 						className="sideMenu"
 						mode="inline"
 						defaultSelectedKeys={[""]}
-                        onClick={({ key }) => {
+						onClick={({ key }) => {
 							switch (key) {
 								case "0":
-									handleNavigate();
+									handleNavigate("/RE");
 									break;
 								case "1":
-									handleNavigate();
+									handleNavigate("/mortgage");
 									break;
 								case "2":
-									handleNavigate();
+									handleNavigate("/Solar");
 									break;
 								case "4":
-                                    handleNavigate();
+									handleNavigate("/Solar");
 									break;
 								case "5":
-                                    handleReale();
+									handleReale();
 									break;
 								case "6":
-                                    handleNavigate();
+									handleNavigate("/Solar");
 									break;
 								default:
 									break;
@@ -176,10 +182,21 @@ const SideNavbar: React.FC = () => {
 						minHeight: 280,
 						background: "#0e0d0c",
 						borderRadius: borderRadiusLG,
-                        color: "#fff",
+						color: "#fff",
 					}}
 				>
-			<Dashboard/>
+					<Routes>
+						<Route path="/" element={<Dashboard />} />
+						<Route
+							path="/real-estate"
+							element={<div>Real Estate Content</div>}
+						/>
+						<Route path="/mortgage" element={<Mortgage />} />
+						<Route path="/solar" element={<div>Solar Content</div>} />
+						<Route path="/insurance" element={<div>Insurance Content</div>} />
+						<Route path="/steel" element={<div>Steel Content</div>} />
+						<Route path="/automotive" element={<div>Automotive Content</div>} />
+					</Routes>
 				</Content>
 			</Layout>
 		</Layout>
