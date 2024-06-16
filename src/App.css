@@ -145,78 +145,18 @@ body {
 	width: 100%;
 }
 
-
-/* 
-.recordingLayout .ant-layout-content {
-	padding: 24px;
-	min-height: 280px;
-	background: #0e0d0c;
-	border: none;
-}
-
-.recordingLayout .recording-details {
-	background-color: #1f1f1f;
-	border-radius: 20px;
-	padding: 16px;
-	color: #fff;
-	min-height: 800px;
-}
-
-.recordingLayout .recording-title {
-	font-size: 24px;
-	color: #fff;
-}
-
-.recordingLayout .recording-card {
-	border: none;
-	background-color: #1f1f1f;
-	text-align: justify;
-	color: #fff;
-	border-radius: 20px;
-	height: 160px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	padding: 14px;
-}
-
-.recordingLayout .recording-card p {
-	margin-top: 0;
-}
-
-.recordingLayout .audio-controls {
-	width: 100%;
-}
-
-.recordingLayout .summary-section {
-	margin-top: 48px;
-	border-radius: 20px;
-}
-
-.recordingLayout .summary {
-	margin-bottom: 8px;
-	padding: 8px;
-	border-radius: 4px;
-	color: #fff;
-}
-
-.recordingLayout .summary p {
-	margin: 0;
-} */
-
 /* Custom scrollbar styling */
 .content::-webkit-scrollbar {
-	width: 8px; /* Width of the scrollbar */
+	width: 8px; 
 }
 
 .content::-webkit-scrollbar-track {
-	background: #333; /* Color of the track */
+	background: #333; 
 }
 
 .content::-webkit-scrollbar-thumb {
-	background-color: #666; /* Color of the scrollbar thumb */
-	border-radius: 4px; /* Rounded corners */
-}
+	background-color: #666; 
+	border-radius: 4px; }
 
 .details-container {
 	height: 800px;
@@ -248,44 +188,58 @@ body {
 	background-color: #d4c3b5;
 }
 
+.recording-card::-webkit-scrollbar {
+	width: 8px; 
+  border-radius: 10px;
+}
+
+.recording-card::-webkit-scrollbar-thumb {
+	background-color: #888; 
+	border-radius: 4px; 
+}
+
+.recording-card::-webkit-scrollbar-track {
+	background: #1a1a1a; 
+  border-radius: 10px;
+}
+
+.recording-card::-webkit-scrollbar-thumb:hover{
+  background-color: #d4c3b5;
+}
+
 .subNavbar {
 	max-height: 800px;
 	overflow-y: auto;
 }
-
-/* RecordingPage.css */
-
 .recordingLayout {
-	background: linear-gradient(to bottom, #1e1e1e, #141414);
-	min-height: 100vh;
-  border-radius: 30px;
-	padding: 2px;
+  color: #fff;
+	/* background: #0e0d0c; */
+  background: linear-gradient(to left, #32200f, #161616);
+	height: 100vh; 
+	display: flex;
+	flex-direction: column;
 }
 
 .recording-details {
-	/* max-width: 1000px; */
-	margin: 2px;
-	padding: 60px;
-  border-radius: 30px;
-	background: #282828;
-	border-radius: 10px;
-	color: #ffffff;
-	position: relative;
+  margin-top: 60px;
+  color: #fff;
+	padding: 20px;
+	overflow-y: auto; 
 }
 
 .recording-title {
 	font-size: 32px;
-    border-radius: 30px;
+	border-radius: 30px;
 	margin-bottom: 20px;
 }
 
 .recording-card {
-	background: #202020;
-    border-radius: 30px;
-	border: none;
+	background: #2b2a2a;
+	border-radius: 30px;
 	padding: 20px;
-	border-radius: 10px;
-	color: #ffffff;
+	color: #fff;
+	max-height: 800px;
+	overflow-y: auto;
 }
 
 .transcript-title {
@@ -320,20 +274,20 @@ body {
 }
 
 .status-button {
-  cursor:not-allowed;
-  position: absolute;
-  width: 220px;
-  height: 40px;
-  top: 20px;
-  right: 20px;
-  color: #fff;
-  font-size: 20px;
-  padding: 8px;
-  border-radius: 10px;
-  background-color: #4caf50; 
-  /* border-color: #4caf50; */
+  border: none;
+	cursor: not-allowed;
+	position: absolute;
+	width: 220px;
+	height: 40px;
+	top: 50px;
+	right: 20px;
+	color: #fff;
+	font-size: 20px;
+	padding: 8px;
+	border-radius: 10px;
+	background-color: #4caf50;
 }
 
 .status-button:hover {
-  background-color: #4caf50; 
+	background-color: #4caf50;
 }

@@ -1,4 +1,4 @@
-// Mortgage.tsx
+// SubContainer.tsx
 import React, { useEffect, useState } from "react";
 import { Layout, Row, Col, Card, Spin, Collapse } from "antd";
 import {
@@ -36,7 +36,7 @@ const agentData: {
 	// Define other agents' data similarly
 };
 
-const Mortgage: React.FC = () => {
+const SubContainer: React.FC = () => {
 	const [selectedAgent, setSelectedAgent] = useState<string | null>(null);
 	const [loading, setLoading] = useState(true);
 
@@ -354,4 +354,4 @@ const Mortgage: React.FC = () => {
 	);
 };
 
-export default Mortgage;
+export default SubContainer;
