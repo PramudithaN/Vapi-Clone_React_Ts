@@ -16,6 +16,7 @@ const AgentCard: React.FC<AgentCardProps> = ({ name }) => {
 				backgroundColor: "#2a2a2a",
 				color: "#fff",
 				border: "none",
+        
 			}}
 		>
 			<UserOutlined style={{ marginRight: "8px" }} />

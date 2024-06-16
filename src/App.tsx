@@ -8,26 +8,15 @@ import {
   Routes,
   useLocation,
 } from "react-router-dom";
-
-// const App: React.FC = () => {
-//   return (
-//     <Router>
-//       <Routes>
-//         <Route path="/" element={<SideNavbar />} />
-//       </Routes>
-//     </Router>
-//   );
-// }
-
-// export default App;
-
-
-
+import RecordingPage from "./Components/Recordings";
 
 const App: React.FC = () => {
     return (
         <Router>
             <SideNavbar />
+            <Routes>
+            <Route path="/recording" element={<RecordingPage />} />
+                </Routes>
         </Router>
     );
 };
