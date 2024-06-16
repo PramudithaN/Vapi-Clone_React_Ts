@@ -15,7 +15,7 @@ import { Button, Col, ConfigProvider, Layout, Menu, Row, theme } from "antd";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import StatBox from "./StatBox";
 import Dashboard from "./Dashboard";
-import Mortgage from "./Mortgage";
+import SubContainer from "./SubContainer";
 
 const { Header, Sider, Content } = Layout;
 
@@ -26,10 +26,6 @@ const SideNavbar: React.FC = () => {
 		token: { colorBgContainer, borderRadiusLG },
 	} = theme.useToken();
 	const navigate = useNavigate();
-
-	// const handleNavigate = () => {
-	// 	navigate("/");
-	// };
 
 	const handleNavigate = (path: string) => {
 		navigate(path);
@@ -46,13 +42,6 @@ const SideNavbar: React.FC = () => {
 						Button: {
 							colorPrimary: "#ff7e16",
 						},
-						// Input: {
-						//   colorPrimary: '#ff7e16',
-						// },
-						// Layout: {
-						//     colorPrimary: '#ff7e16',
-						//   colorBgContainer: '#ff7e16',
-						// },
 						Menu: {
 							colorPrimary: "#ff7e16",
 						},
@@ -133,7 +122,7 @@ const SideNavbar: React.FC = () => {
 							{
 								key: "1",
 								icon: <UserOutlined />,
-								label: "Mortgage",
+								label: "SubContainer",
 							},
 							{
 								key: "2",
@@ -191,7 +180,7 @@ const SideNavbar: React.FC = () => {
 							path="/real-estate"
 							element={<div>Real Estate Content</div>}
 						/>
-						<Route path="/mortgage" element={<Mortgage />} />
+						<Route path="/mortgage" element={<SubContainer />} />
 						<Route path="/solar" element={<div>Solar Content</div>} />
 						<Route path="/insurance" element={<div>Insurance Content</div>} />
 						<Route path="/steel" element={<div>Steel Content</div>} />
@@ -200,12 +189,6 @@ const SideNavbar: React.FC = () => {
 				</Content>
 			</Layout>
 		</Layout>
-
-		// <>
-		// <div className="Layout">
-
-		// </div>
-		// </>
 	);
 };
 
