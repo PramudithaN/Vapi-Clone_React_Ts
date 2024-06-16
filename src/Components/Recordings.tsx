@@ -1,6 +1,5 @@
-// RecordingPage.tsx
 import React from "react";
-import { Layout, Card } from "antd";
+import { Layout, Card, Button } from "antd";
 
 const { Content } = Layout;
 
@@ -12,9 +11,10 @@ const RecordingPage: React.FC = () => {
 			<Content>
 				<div className="recording-details">
 					<h2 className="recording-title">Recording {recordingId}</h2>
-					<Card className="recording-card">
-						<h1 style={{marginTop:'380px'}}>Transcript</h1>
-                        <p style={{marginBottom:'60px',marginTop:'50px'}}>Sure! Here’s a different summary presented as a single paragraph:
+					<div className="recording-card">
+						<h1 className="transcript-title">Transcript</h1>
+						<p className="transcript-text">
+							Sure! Here’s a different summary presented as a single paragraph:
 							During the 35-minute recording on June 8, 2024, the conversation
 							commenced with brief introductions and an exchange of
 							pleasantries. The agent then provided an overview of the current
@@ -40,15 +40,16 @@ const RecordingPage: React.FC = () => {
 							satisfaction with the information provided and interest in
 							pursuing several discussed opportunities.
 						</p>
-						    <audio controls className="audio-controls">
-							<source src="https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3" type="audio/mpeg" />
+						<audio controls className="audio-controls">
+							<source
+								src="https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3"
+								type="audio/mpeg"
+							/>
 							Your browser does not support the audio element.
 						</audio>
-				
-					<div className="summary-section">
-						<div className="summary">
-							<h1>Summary</h1>
-							<p>
+						<div className="summary-section">
+							<h1 className="summary-title">Summary</h1>
+							<p className="summary-text">
 								The caller seemed satisfied with the information provided and
 								expressed interest in pursuing several investment opportunities
 								discussed during the call. A follow-up meeting was scheduled for
@@ -57,7 +58,7 @@ const RecordingPage: React.FC = () => {
 							</p>
 						</div>
 					</div>
-                    </Card>
+					<button  className="status-button">Approved</button>
 				</div>
 			</Content>
 		</Layout>

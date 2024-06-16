@@ -145,8 +145,8 @@ body {
 	width: 100%;
 }
 
-/* RecordingPage.css */
 
+/* 
 .recordingLayout .ant-layout-content {
 	padding: 24px;
 	min-height: 280px;
@@ -155,7 +155,6 @@ body {
 }
 
 .recordingLayout .recording-details {
-	/* background-color: #3c3733; */
 	background-color: #1f1f1f;
 	border-radius: 20px;
 	padding: 16px;
@@ -190,13 +189,11 @@ body {
 }
 
 .recordingLayout .summary-section {
-	/* background-color: #1f1f1f; */
 	margin-top: 48px;
 	border-radius: 20px;
 }
 
 .recordingLayout .summary {
-	/* background-color: #ff7e00; */
 	margin-bottom: 8px;
 	padding: 8px;
 	border-radius: 4px;
@@ -205,7 +202,7 @@ body {
 
 .recordingLayout .summary p {
 	margin: 0;
-}
+} */
 
 /* Custom scrollbar styling */
 .content::-webkit-scrollbar {
@@ -254,4 +251,89 @@ body {
 .subNavbar {
 	max-height: 800px;
 	overflow-y: auto;
+}
+
+/* RecordingPage.css */
+
+.recordingLayout {
+	background: linear-gradient(to bottom, #1e1e1e, #141414);
+	min-height: 100vh;
+  border-radius: 30px;
+	padding: 2px;
+}
+
+.recording-details {
+	/* max-width: 1000px; */
+	margin: 2px;
+	padding: 60px;
+  border-radius: 30px;
+	background: #282828;
+	border-radius: 10px;
+	color: #ffffff;
+	position: relative;
+}
+
+.recording-title {
+	font-size: 32px;
+    border-radius: 30px;
+	margin-bottom: 20px;
+}
+
+.recording-card {
+	background: #202020;
+    border-radius: 30px;
+	border: none;
+	padding: 20px;
+	border-radius: 10px;
+	color: #ffffff;
+}
+
+.transcript-title {
+	margin-top: 20px;
+	font-size: 24px;
+}
+
+.transcript-text {
+	margin-bottom: 60px;
+	margin-top: 20px;
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+.audio-controls {
+	width: 100%;
+	margin: 20px 0;
+}
+
+.summary-section {
+	margin-top: 40px;
+}
+
+.summary-title {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.summary-text {
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+.status-button {
+  cursor:not-allowed;
+  position: absolute;
+  width: 220px;
+  height: 40px;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  font-size: 20px;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: #4caf50; 
+  /* border-color: #4caf50; */
+}
+
+.status-button:hover {
+  background-color: #4caf50; 
 }
