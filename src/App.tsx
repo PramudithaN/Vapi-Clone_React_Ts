@@ -1,35 +1,28 @@
-
 import "./App.css";
-import React from 'react';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import SideNavbar from './Components/SideNavbar';
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  useLocation,
-} from "react-router-dom";
-
-// const App: React.FC = () => {
-//   return (
-//     <Router>
-//       <Routes>
-//         <Route path="/" element={<SideNavbar />} />
-//       </Routes>
-//     </Router>
-//   );
-// }
-
-// export default App;
-
-
-
+import RecordingPage from './Components/Recordings';
 
 const App: React.FC = () => {
+    const [showNavbar, setShowNavbar] = useState(true);
+
     return (
         <Router>
-            <SideNavbar />
+            {showNavbar && <SideNavbar />}
+            <Routes>
+                <Route path="/recording" element={<RecordingPageWithNoNavbar />} />
+            </Routes>
         </Router>
     );
+
+    function RecordingPageWithNoNavbar() {
+        return (
+            <div>
+                <RecordingPage />
+            </div>
+        );
+    }
 };
 
 export default App;

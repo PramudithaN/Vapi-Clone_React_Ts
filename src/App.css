@@ -40,6 +40,7 @@ body {
 
 .sideMenu {
 	color: #fff;
+  padding-bottom: 10px;
 	background-color: #161616;
 }
 
@@ -143,3 +144,67 @@ body {
 	align-items: center;
 	width: 100%;
 }
+
+/* RecordingPage.css */
+
+.recordingLayout .ant-layout-content {
+  padding: 24px;
+  min-height: 280px;
+  background: #0e0d0c;
+  border: none;
+}
+
+.recordingLayout .recording-details {
+  /* background-color: #3c3733; */
+  background-color: #1f1f1f;
+  border-radius:20px;
+  padding: 16px;
+  color: #fff;
+  min-height: 800px;
+}
+
+.recordingLayout .recording-title {
+  font-size: 24px;
+  color: #fff;
+}
+
+.recordingLayout .recording-card {
+  border: none;
+  background-color: #1f1f1f;
+  text-align: justify;
+  color: #fff;
+  border-radius: 20px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 14px;
+}
+
+.recordingLayout .recording-card p {
+  margin-top: 0;
+}
+
+.recordingLayout .audio-controls {
+  width: 100%;
+}
+
+.recordingLayout .summary-section {
+  /* background-color: #1f1f1f; */
+  margin-top: 48px;
+  border-radius: 20px;
+}
+
+.recordingLayout .summary {
+  /* background-color: #ff7e00; */
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 4px;
+  color: #fff;
+  
+}
+
+.recordingLayout .summary p {
+  margin: 0;
+}
+

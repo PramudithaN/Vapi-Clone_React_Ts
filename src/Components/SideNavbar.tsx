@@ -78,7 +78,7 @@ const SideNavbar: React.FC = () => {
 							justifyContent: "center",
 							alignItems: "center",
 							paddingTop: "4px",
-							paddingBottom: "10px",
+							paddingBottom: "40px",
 						}}
 					>
 						<img
